@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [CommerceJs]" guice-stage="DEVELOPMENT" verbose="5">
+  <parameter name="url" value="https://commercejs-demo-store.netlify.app/"/>
+  <listeners>
+    <listener class-name="day2.RetryFailedTests"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="ChromeBrowserTesting(failed)" verbose="5">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="day2.TC_001Commercejs">
+        <methods>
+          <include name="printOrderID"/>
+          <include name="postCondition"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- day2.TC_001Commercejs -->
+    </classes>
+  </test> <!-- ChromeBrowserTesting(failed) -->
+</suite> <!-- Failed suite [CommerceJs] -->
